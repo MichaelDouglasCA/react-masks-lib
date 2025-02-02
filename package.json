@@ -1,0 +1,25 @@
+{
+  "name": "react-masks-lib",
+  "version": "1.0.0",
+  "description": "Uma biblioteca de máscaras para React",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/seuusuario/react-masks-lib.git"
+  },
+  "keywords": ["react", "input", "mask", "form"],
+  "author": "Seu Nome",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^18.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/react": "^18.0.0"
+  }
+}
