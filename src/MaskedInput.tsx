@@ -28,15 +28,15 @@ const applyMask = (value: string, mask: MaskType, customMask?: (value: string) =
   }
 };
 
-const MaskedInput: React.FC<MaskedInputProps> = ({ mask, customMask, ...props }) => {
-  const [value, setValue] = useState("");
+function MaskedInput({ mask, customMask, ...props }: MaskedInputProps) {
+  const [value, setValue] = useState<string>("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const maskedValue = applyMask(e.target.value, mask, customMask);
     setValue(maskedValue);
   };
 
-  return <input {...props} value={value} onChange={handleChange} />;
-};
+  return <input type="text" {...props} value={value} onChange={handleChange} />;
+}
 
 export default MaskedInput;
